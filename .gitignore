@@ -1,0 +1,6 @@
+.env
+firebase-account.json
+config.py
+oura_daemon.toml
+oura_justthetip.toml
+__pycache__/*

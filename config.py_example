@@ -1,0 +1,41 @@
+###########################################
+#  MAINNET CONFIG OPTIONS                 #
+###########################################
+sendTelegramBotMessages = False
+shardDepth=1 # used for writing stake key history.  sharding makes writes faster and reads slower
+baseNetwork="Mainnet"
+clisuffix="  --mainnet"
+clisuffix2=" --mainnet"
+cardano_start_time=1506203091
+firstSlot=22204800
+firstSlotEpoch=249
+blockfrostPrefix='cardano-mainnet'
+api_key=''
+ledgerStateDirectory="/home/ubuntu/ls/"
+###########################################
+database = ''
+user =     ''
+password = ''
+host =     ''
+port =     ''
+###########################################
+cardanocli = "/home/ubuntu/.local/bin/cardano-cli"
+
+vkeylookup={
+"61261a95b7613ee6bf2067dad77b70349729b0c50d57bc1cf30de0db4a1e73a8":"1d4f2e1fda43070d71bb22a5522f86943c7c18aeb4fa47a362c27e23",
+"50733161fdafb6c8cb6fae0e25bdf9555105b3678efb08f1775b9e90de4f5c77bcc8cefff8d9011cb278b28fddc86d9bab099656d77a7856c7619108cbf65752":"byron",
+"d2965c869901231798c5d02d39fca2a79aa47c3e854921b5855c82fd1470891517e1fa771655ec8cad13ecf6e5719adc5392fc057e1703d5f583311e837462f1":"byron",
+"993a8f056d2d3e50b0ac60139f10df8f8123d5f7c4817b40dac2b5dd8aa94a82e8536832e6312ddfc0787d7b5310c815655ada4fdbcf6b12297d4458eccc2dfb":"byron",
+"9a6fa343c8c6c36de1a3556feb411bfdf8708d5af88de8626d0fc6bfa4eebb6d99ab83d90d66531ad9122d3f9cb4bc9d05b26448672532a68da796f9328431fd":"byron",
+"9180d818e69cd997e34663c418a648c076f2e19cd4194e486e159d8580bc6cda":"4485708022839a7b9b8b639a939c85ec0ed6999b5b6dc651b03c43f6",
+"8b53207629f9a30e4b2015044f337c01735abe67243c19470c9dae8c7b732798":"7f72a1826ae3b279782ab2bc582d0d2958de65bd86b2c4f82d8ba956",
+"e8c03a03c0b2ddbea4195caf39f41e669f7d251ecf221fbb2f275c0a5d7e05d1":"d9e5c76ad5ee778960804094a389f0b546b5c2b140a62f8ec43ea54d",
+"5fddeedade2714d6db2f9e1104743d2d8d818ecddc306e176108db14caadd441":"855d6fc1e54274e331e34478eeac8d060b0b90c1f9e8a2b01167c048",
+"f14f712dc600d793052d4842d50cefa4e65884ea6cf83707079eb8ce302efc85":"69ae12f9e45c0c9122356c8e624b1fbbed6c22a2e3b4358cf0cb5011",
+"89c29f8c4af27b7accbe589747820134ebbaa1caf3ce949270a3d0c7dcfd541b":"6535db26347283990a252313a7903a45e3526ec25ddba381c071b25b"
+}
+
+genesispools=['1d4f2e1fda43070d71bb22a5522f86943c7c18aeb4fa47a362c27e23','4485708022839a7b9b8b639a939c85ec0ed6999b5b6dc651b03c43f6','7f72a1826ae3b279782ab2bc582d0d2958de65bd86b2c4f82d8ba956',
+'d9e5c76ad5ee778960804094a389f0b546b5c2b140a62f8ec43ea54d','855d6fc1e54274e331e34478eeac8d060b0b90c1f9e8a2b01167c048','69ae12f9e45c0c9122356c8e624b1fbbed6c22a2e3b4358cf0cb5011',
+'6535db26347283990a252313a7903a45e3526ec25ddba381c071b25b','byron                                                   ']
+

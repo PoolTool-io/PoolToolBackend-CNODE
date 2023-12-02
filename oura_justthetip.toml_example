@@ -1,0 +1,40 @@
+[source]
+type = "N2C"
+address = ["Unix", "/opt/cardano/cnode/sockets/node0.socket"]
+magic = "mainnet"
+min_depth = 0
+
+[source.mapper]
+include_transaction_details = true
+include_block_cbor = false
+include_block_end_events  = false
+
+[[filters]]
+type = "Fingerprint"
+
+[[filters]]
+type = "Selection"
+
+
+[filters.check]
+predicate = "variant_in"
+argument = ["Transaction","TxOutput"]
+
+
+
+[sink]
+type = "Webhook"
+url = "http://xxxx/ouraconsume"
+timeout = 30000
+
+[sink.retry_policy]
+max_retries = 1000000
+backoff_unit = 5000
+backoff_factor = 1
+max_backoff = 100000
+
+
+[metrics]
+address = "0.0.0.0:9186"
+endpoint = "/metrics"
+
