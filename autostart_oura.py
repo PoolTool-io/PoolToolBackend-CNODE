@@ -11,7 +11,7 @@ if recent_block is None or 'block' not in recent_block:
     time.sleep(30)
     exit()
 cursortext = f"{recent_block['cslot']},{recent_block['hash']}"
-command = f"/usr/local/bin/oura daemon --config /home/ubuntu/pt3_production/oura_daemon.toml --cursor {cursortext}"
+command = f"/usr/local/bin/oura daemon --config /home/ubuntu/PoolToolBackend-CNODE/oura_daemon.toml --cursor {cursortext}"
 print(command)
 print("starting Oura")
 te = runcli(command)
