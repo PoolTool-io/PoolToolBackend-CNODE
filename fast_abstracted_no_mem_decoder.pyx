@@ -16,12 +16,28 @@ class GenericCBORDecoder:
         self.chunk_size = 4096  # Adjust this as needed
         self.last_byte = None
         self.terminate = False
+        self.totalutxo = 0
+
 
     def initialize_file_size(self, f):
         self.file_size = os.fstat(f.fileno()).st_size
 
+    def get_total_utxo(self):
+        return self.totalutxo
+
     def get_extracted_data(self):
         return self.extracted_data
+
+    def zero_extracted_data(self):
+        self.extracted_data = {}
+        self.totalutxo=0
+        self.context = {}
+        self.current_key = None
+        self.buffer = b""
+        self.buffer_pos = 0
+        self.terminate = False
+        self.last_byte = None
+        return
 
     def process_value(self, value, config, context):
         action = config.get('action', 'store')
@@ -286,8 +302,6 @@ class GenericCBORDecoder:
            
         else:
             raise ValueError('Unknown major type: ' + str(major_type))
-        
-       
         hierarchy_len = len(hierarchy)
         # iterate over configs where completed=false
         for config in self.extraction_config:
